@@ -27,7 +27,20 @@ struct Matrix {
   }
 }
 
-var m = Matrix(rows: 2, columns: 2)
-m[0, 0] = 1.1
-m[0, 1] = 2.1
-print(m[0, 0])
+var matrix = Matrix(rows: 2, columns: 2)
+matrix[0, 1] = 1.5
+matrix[1, 0] = 3.2
+print(matrix[0, 1])
+print(matrix[1, 0])
+
+
+// test
+struct Test {
+  var num = 0
+  subscript(tmp: Int) -> Int {
+    return tmp*num
+  }
+}
+var t = Test(num:8)
+print(t[2])
+
